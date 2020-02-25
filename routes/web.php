@@ -60,3 +60,7 @@ Route::get('/testOrm','PruebasController@testOrm');
     //Rutas de post Usamos rutas de tipo resourse (crea todas las rutas 
     //necesarias consultar en la consola php artisan route:list)
     Route::resource('/api/post','PostController');
+    Route::post('/api/post/upload','PostController@upload');
+    Route::get('/api/post/image/{filename}','PostController@getImage');
+    Route::get('/api/post/category/{id}','PostController@getPostsByCategory');
+    Route::get('/api/post/user/{id}','PostController@getPostsByUser');
